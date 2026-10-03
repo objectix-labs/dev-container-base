@@ -29,6 +29,7 @@
     "source=claude-code-config,target=/home/vscode/.claude,type=volume"
   ],
   "initializeCommand": ".devcontainer/scripts/init.sh",
+  "postCreateCommand": ".devcontainer/scripts/setup-dev-container.sh",
   "runArgs": [
     "--env-file",
     ".devcontainer/tmp/.env.devcontainer"
