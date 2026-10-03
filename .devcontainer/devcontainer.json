@@ -1,0 +1,38 @@
+{
+  // TODO: Set name of this container to a proper name reflecting its use case.
+  "name": "Generic Dev Container",
+  "dockerFile": "Dockerfile",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "configureZshAsDefaultShell": true
+    }
+    // TODO: Add additional features as needed
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "shd101wyy.markdown-preview-enhanced",
+        "anthropic.claude-code"
+        // TODO: Add additional VS Code extensions as needed
+      ]
+    }
+  },
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude"
+  },
+  "mounts": [
+    "source=claude-code-config,target=/home/vscode/.claude,type=volume"
+  ],
+  "initializeCommand": ".devcontainer/scripts/init.sh",
+  "runArgs": [
+    "--env-file",
+    ".devcontainer/tmp/.env.devcontainer"
+  ],
+  "remoteUser": "vscode",
+  "containerUser": "vscode"
+}
