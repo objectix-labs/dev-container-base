@@ -17,7 +17,10 @@
     "vscode": {
       "extensions": [
         "shd101wyy.markdown-preview-enhanced",
-        "anthropic.claude-code"
+        "anthropic.claude-code",
+        "mhutchie.git-graph",
+        "me-dutour-mathieu.vscode-github-actions",
+        "waderyan.gitblame"
         // TODO: Add additional VS Code extensions as needed
       ]
     }
