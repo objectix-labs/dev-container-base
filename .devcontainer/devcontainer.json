@@ -20,7 +20,9 @@
         "anthropic.claude-code",
         "mhutchie.git-graph",
         "me-dutour-mathieu.vscode-github-actions",
-        "waderyan.gitblame"
+        "waderyan.gitblame",
+        "vivaxy.vscode-conventional-commits",
+        "alefragnani.bookmarks"
         // TODO: Add additional VS Code extensions as needed
       ]
     }
